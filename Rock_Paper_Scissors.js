@@ -5,3 +5,6 @@ function GetComputerChoice() {
   }
   const ComputerSelection = GetComputerChoice();
   console.log(ComputerSelection);
+
+const playerSelection = prompt("Choose between 'rock', 'paper', or 'scissors'");
+console.log(playerSelection);
