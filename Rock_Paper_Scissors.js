@@ -8,9 +8,11 @@ function getComputerChoice() {
   const computerSelection = getComputerChoice();
   console.log(computerSelection);
 
+  
 //Ask the player to choose between "rock" OR "paper" OR "scissors"
 const playerSelection = prompt("Choose between 'rock', 'paper', or 'scissors'","scissors");
 console.log(playerSelection);
+
 
 //Compare the choices AND declare the winner for a single round
 function playRound(playerSelection, computerSelection) {
@@ -26,7 +28,7 @@ function playRound(playerSelection, computerSelection) {
     default:
       return "No winner this time";
   }
-}console.log(playRound())
+}console.log(playRound(playerSelection, computerSelection))
 
 		
 //Play a 5 rounds game that keeps score and reports a winner or loser at the end
@@ -35,7 +37,7 @@ let computerNumberOfWins = 0;
 
 function playGame() {
   for (let i = 0; i < 4; i++) {
-    const result = PlayRound(PlayerSelection, ComputerSelection);
+    const result = playRound(playerSelection, computerSelection);
     if (result === 'You Win!') {
       playerNumberOfWins++;
     } else if (result === 'You Loose!') {
