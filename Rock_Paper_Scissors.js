@@ -27,3 +27,27 @@ function playRound(playerSelection, computerSelection) {
       return "No winner this time";
   }
 }console.log(playRound())
+
+		
+//Play a 5 rounds game that keeps score and reports a winner or loser at the end
+let playerNumberOfWins = 0;
+let computerNumberOfWins = 0;
+
+function playGame() {
+  for (let i = 0; i < 4; i++) {
+    const result = PlayRound(PlayerSelection, ComputerSelection);
+    if (result === 'You Win!') {
+      playerNumberOfWins++;
+    } else if (result === 'You Loose!') {
+      computerNumberOfWins++;
+    }
+  }
+
+  if (playerNumberOfWins > computerNumberOfWins) {
+    console.log('You Win the Game');
+  } else {
+    console.log('You Loose the Game!');
+  }
+}
+
+playGame();
